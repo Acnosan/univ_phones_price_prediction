@@ -1,8 +1,8 @@
 model_name,model,K_cv,best_params,best_mse,best_r2,train_time
 Linear,"Pipeline(steps=[('poly', PolynomialFeatures(degree=1)),
-                ('scaler', StandardScaler()), ('model', LinearRegression())])",8,"{'model__fit_intercept': True, 'poly__degree': 1}",6.917928733488903e+21,-6.917928733488903e+21,0.005001068115234375
+                ('scaler', StandardScaler()), ('model', LinearRegression())])",8,"{'model__fit_intercept': True, 'poly__degree': 1}",-6.917928733488903e+21,-6.917928733488903e+21,22.956804513931274
 Lasso,"Pipeline(steps=[('scaler', StandardScaler()),
-                ('model', Lasso(alpha=15, max_iter=10000, tol=0.1))])",8,"{'model__alpha': 15, 'model__max_iter': 10000, 'model__tol': 0.1}",-0.7445134634237012,0.7445134634237012,0.003999948501586914
+                ('model', Lasso(alpha=15, max_iter=10000, tol=0.1))])",8,"{'model__alpha': 15, 'model__max_iter': 10000, 'model__tol': 0.1}",0.7445134634237012,0.7445134634237012,5.9914562702178955
 Ridge,"Pipeline(steps=[('scaler', StandardScaler()),
                 ('model',
-                 Ridge(alpha=20, max_iter=50000, solver='saga', tol=0.01))])",8,"{'model__alpha': 20, 'model__max_iter': 50000, 'model__solver': 'saga', 'model__tol': 0.01}",-0.7456287940095365,0.7456287940095365,0.007999658584594727
+                 Ridge(alpha=14, max_iter=30000, solver='saga', tol=0.01))])",8,"{'model__alpha': 14, 'model__max_iter': 30000, 'model__solver': 'saga', 'model__tol': 0.01}",0.7456704768659788,0.7456704768659788,5.885975122451782
