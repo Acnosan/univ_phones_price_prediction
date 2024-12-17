@@ -1,8 +1,9 @@
-model_name,model,K_cv,best_params,best_r2,train_time
-Linear,"Pipeline(steps=[('poly', PolynomialFeatures(degree=1)),
-                ('scaler', StandardScaler()), ('model', LinearRegression())])",8,"{'model__fit_intercept': True, 'poly__degree': 1}",-6.917928733488903e+21,20.8246808052063
+model_name,model,K_cv,best_params,train_time,mean_test_r2,mean_test_mse,mean_test_mae
+Simple,"Pipeline(steps=[('scaler', StandardScaler()), ('model', LinearRegression())])",8,{'model__fit_intercept': True},3.0206291675567627,-8.870477373715764e+21,3.795536001581734e+30,58429410745349.21
+Poly,"Pipeline(steps=[('poly', PolynomialFeatures(degree=3)),
+                ('scaler', StandardScaler()), ('model', LinearRegression())])",8,"{'model__fit_intercept': True, 'poly__degree': 3}",29.197308778762817,-5.99423531475239e+20,2.5590843474405864e+29,64957142633426.336
 Lasso,"Pipeline(steps=[('scaler', StandardScaler()),
-                ('model', Lasso(alpha=15, max_iter=10000, tol=0.1))])",8,"{'model__alpha': 15, 'model__max_iter': 10000, 'model__tol': 0.1}",0.7445134634237012,5.502727746963501
+                ('model', Lasso(alpha=15, max_iter=10000, tol=0.1))])",8,"{'model__alpha': 15, 'model__max_iter': 10000, 'model__tol': 0.1}",10.518151998519897,0.7445134634237012,106523615.02194491,7658.51799436426
 Ridge,"Pipeline(steps=[('scaler', StandardScaler()),
                 ('model',
-                 Ridge(alpha=14, max_iter=30000, solver='saga', tol=0.01))])",8,"{'model__alpha': 14, 'model__max_iter': 30000, 'model__solver': 'saga', 'model__tol': 0.01}",0.7457640618176422,6.057092905044556
+                 Ridge(alpha=13, max_iter=30000, solver='saga', tol=0.01))])",8,"{'model__alpha': 13, 'model__max_iter': 30000, 'model__solver': 'saga', 'model__tol': 0.01}",10.724729299545288,0.745737297577612,106023044.26186362,7643.002841348485
