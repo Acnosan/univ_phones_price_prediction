@@ -1,9 +1,9 @@
-model_name,model,K_cv,best_params,train_time,mean_test_r2,mean_test_mse,mean_test_mae
-Simple,"Pipeline(steps=[('scaler', StandardScaler()), ('model', LinearRegression())])",8,{'model__fit_intercept': True},3.0206291675567627,-8.870477373715764e+21,3.795536001581734e+30,58429410745349.21
-Poly,"Pipeline(steps=[('poly', PolynomialFeatures(degree=3)),
-                ('scaler', StandardScaler()), ('model', LinearRegression())])",8,"{'model__fit_intercept': True, 'poly__degree': 3}",29.197308778762817,-5.99423531475239e+20,2.5590843474405864e+29,64957142633426.336
+model_name,model,K_cv,best_params,train_time,mse_calculated,mape_calculated,r2_calculated
+Simple,"Pipeline(steps=[('scaler', StandardScaler()), ('model', LinearRegression())])",8,{'model__fit_intercept': True},4.2369818687438965,2.8331295562280395e+34,1964916565436.4846,6.736987450553254e+25
+Poly,"Pipeline(steps=[('poly', PolynomialFeatures()), ('scaler', StandardScaler()),
+                ('model', LinearRegression())])",8,"{'model__fit_intercept': True, 'poly__degree': 2}",37.57513380050659,2.10372957319502e+37,63007051857711.3,5.002524400204952e+28
 Lasso,"Pipeline(steps=[('scaler', StandardScaler()),
-                ('model', Lasso(alpha=15, max_iter=10000, tol=0.1))])",8,"{'model__alpha': 15, 'model__max_iter': 10000, 'model__tol': 0.1}",10.518151998519897,0.7445134634237012,106523615.02194491,7658.51799436426
+                ('model', Lasso(alpha=20, max_iter=10000, tol=0.1))])",8,"{'model__alpha': 20, 'model__max_iter': 10000, 'model__tol': 0.1}",14.624879121780396,193589163.4217378,0.44829709208761037,0.6471458214181721
 Ridge,"Pipeline(steps=[('scaler', StandardScaler()),
                 ('model',
-                 Ridge(alpha=13, max_iter=30000, solver='saga', tol=0.01))])",8,"{'model__alpha': 13, 'model__max_iter': 30000, 'model__solver': 'saga', 'model__tol': 0.01}",10.724729299545288,0.745737297577612,106023044.26186362,7643.002841348485
+                 Ridge(alpha=18, max_iter=30000, solver='saga', tol=1))])",8,"{'model__alpha': 18, 'model__max_iter': 30000, 'model__solver': 'saga', 'model__tol': 1}",10.98018217086792,198429160.68321323,0.4365409597344538,0.5157926223341881
